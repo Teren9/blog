@@ -1,7 +1,7 @@
 @import "palette";
 
 body{
-  background-color: $light-background;
+  background-color: $dark-background;
   color: $text;
 }
 .header{
@@ -15,6 +15,7 @@ body{
     text-decoration: none;
     float: left;
     color: $dark;
+    //background-color: $dark-background;
     margin: 20px;
     padding: 5px;
     border: solid 1px $mid;
