@@ -1,0 +1,46 @@
+@import "palette";
+
+body{
+  background-color: $light-background;
+  color: $text;
+}
+.header{
+  border-bottom: solid 1px $mid;
+  position: fixed;
+  width: 80%;
+  margin: auto;
+  max-width: 1000px;
+  .logo{
+    text-decoration: none;
+    float: left;
+    color: $dark;
+    margin: 20px;
+    padding: 5px;
+    border: solid 1px $mid;
+    border-radius: 2px;
+  }
+  .nav{
+    float: right;
+    margin: 26px;
+    a{
+        text-decoration: none;
+        color: $dark;
+    }
+    a:hover{
+      color: $mid;
+    }
+  }
+}
+.content{
+  padding-top: 50px;
+  h1{
+    color: $dark;
+  }
+  a{
+    color: $light;
+    text-decoration: none;
+  }
+  a:hover{
+    color: $mid;
+  }
+}
