@@ -1,8 +1,20 @@
 @import "palette";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 body{
   background-color: $dark-background;
   color: $text;
+  font-family: 'Open Sans', sans-serif;
+  h1{
+    color: $dark;
+  }
+  a{
+    color: $light;
+    text-decoration: none;
+  }
+  a:hover{
+    color: $mid;
+  }
 }
 .header{
   border-bottom: solid 1px $mid;
@@ -13,6 +25,7 @@ body{
   //max-width: 1000px;
   .logo{
     text-decoration: none;
+    font-weight: bold;
     float: left;
     color: $dark;
     //background-color: $dark-background;
@@ -20,6 +33,11 @@ body{
     padding: 5px;
     border: solid 1px $mid;
     border-radius: 2px;
+    background-color: $light-background;
+  }
+  .logo:hover{
+    background-color: $dark-background;
+    color: $mid;
   }
   .nav{
     float: right;
@@ -35,17 +53,21 @@ body{
 }
 .content{
   padding-top: 80px;
-  width: 70%;
+  width: 60%;
   margin: auto;
   max-width: 1000px;
   h1{
-    color: $dark;
-  }
-  a{
-    color: $light;
-    text-decoration: none;
-  }
-  a:hover{
     color: $mid;
   }
+  .seperator{
+    padding-top: 10px;
+    width: 200px;
+    border-bottom: 1px solid $mid;
+  }
+}
+.footer{
+  border-top: 1px solid $mid;
+  background-color: $light-background;
+  padding: 20px
+
 }
