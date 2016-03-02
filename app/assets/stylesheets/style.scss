@@ -61,7 +61,7 @@ body{
   padding-bottom: 0px;
   margin-bottom: 0px;
 }
-.content{
+.article{
   //border: 2px solid $dark;
   border-radius: 10px;
   padding-top: 3px;
@@ -71,6 +71,12 @@ body{
   width: 60%;
   margin: auto;
   margin-top: 0px;
+  margin-bottom: 30px;
+
+  -webkit-box-shadow: 0px 9px 26px -5px rgba(102,102,102,1);
+  -moz-box-shadow: 0px 9px 26px -5px rgba(102,102,102,1);
+  box-shadow: 0px 9px 26px -5px rgba(102,102,102,1);
+
   max-width: 1000px;
   background-color: white;
   h1{
@@ -81,6 +87,9 @@ body{
     width: 200px;
     border-bottom: 1px solid $light-background;
   }
+}
+.hebrew{
+  direction: rtl;
 }
 .footer{
   //position: fixed;
