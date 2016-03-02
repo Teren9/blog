@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 body{
-  background-color: $dark-background;
+  background-color: $light-background;
   color: $text;
   font-family: 'Open Sans', sans-serif;
   font-size: 0.9rem;
@@ -19,10 +19,12 @@ body{
   }
 }
 .header{
-  border-bottom: solid 1px $mid;
-  background-color: $light-background;
-  position: absolute;
+  border-bottom: solid 1px $light-background;
+  background-color: white;
+  //top: 50px;
+  position: fixed;
   width: 100%;
+  height: 50px;
   margin: auto;
   //max-width: 1000px;
   .logo{
@@ -31,19 +33,20 @@ body{
     float: left;
     color: $dark;
     //background-color: $dark-background;
-    margin: 20px;
+    margin: 10px 0 0 10px;
     padding: 5px;
-    border: solid 1px $mid;
-    border-radius: 2px;
-    background-color: $light-background;
+    border: solid 1px $light-background;
+    border-radius: 5px;
+    background-color: white;
   }
   .logo:hover{
-    background-color: $mid;
+    background-color: $dark;
     color: $light-background;
+    border-color: $dark;
   }
   .nav{
     float: right;
-    margin: 26px;
+    margin: 15px;
     a{
         text-decoration: none;
         color: $dark;
@@ -53,27 +56,39 @@ body{
     }
   }
 }
+.push{
+  padding-top: 100px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
 .content{
-  padding-top: 80px;
+  //border: 2px solid $dark;
+  border-radius: 10px;
+  padding-top: 3px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 5px;
   width: 60%;
   margin: auto;
-//  margin-top: 100px;
+  margin-top: 0px;
   max-width: 1000px;
-  background-color: $light-background;
+  background-color: white;
   h1{
-    color: $mid;
+    color: $dark;
   }
   .seperator{
     padding-top: 10px;
     width: 200px;
-    border-bottom: 1px solid $mid;
+    border-bottom: 1px solid $light-background;
   }
 }
 .footer{
-  border-top: 1px solid $mid;
-  background-color: $light-background;
-  padding: 20px
+  //position: fixed;
+  margin-top: 10px;
+  bottom: 0px;
+  width: 100%;
+  border-top: 1px solid $light-background;
+  background-color: white;
+  padding: 10px;
 
 }
