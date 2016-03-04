@@ -35,38 +35,3 @@ jQuery ($) ->
     $('#prev').click ->
       show_item(true)
     setInterval(show_item, item_interval)
-
-
-
-
-
-
-
-# $(window).load ->
-#   #start after HTML, images have loaded
-#   InfiniteRotator = init: ->
-#     #initial fade-in time (in milliseconds)
-#     initialFadeIn = 1000
-#     #interval between items (in milliseconds)
-#     itemInterval = 5000
-#     #cross-fade time (in milliseconds)
-#     fadeTime = 2500
-#     #count number of items
-#     numberOfItems = $(@image_class).length
-#     #set current item
-#     currentItem = 0
-#     #show first item
-#     $(@image_class).eq(currentItem).fadeIn initialFadeIn
-#     #loop through the items
-#     infiniteLoop = setInterval((->
-#       $(@image_class).eq(currentItem).fadeOut fadeTime
-#       if currentItem == numberOfItems - 1
-#         currentItem = 0
-#       else
-#         currentItem++
-#       $(@image_class).eq(currentItem).fadeIn fadeTime
-#       return
-#     ), itemInterval)
-#     return
-#   InfiniteRotator.init()
-#   return
