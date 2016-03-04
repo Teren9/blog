@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'pages/index'
   get 'pages/welcome'
+  get 'pages/cats'
+
   root to: 'pages#welcome'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routse lay out with "rake routes".
