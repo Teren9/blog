@@ -34,11 +34,27 @@ body{
   border-bottom: solid 1px $light-background;
   background-color: white;
   //top: 50px;
-  position: fixed;
+  position: absolute;
   width: 100%;
-  height: 50px;
+  height: 150px;
   margin: auto;
   //max-width: 1000px;
+  .lang-bar{
+    float: right;
+    .lang{
+      margin-top: 10px;
+      margin-right: 10px;
+      width: 38px;
+      height: 20px;
+      -webkit-filter: grayscale(1);
+      filter: grayscale(1);
+    }
+    .lang:hover{
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0);
+    }
+  }
+
   .logo{
     text-decoration: none;
     font-weight: bold;
@@ -56,20 +72,43 @@ body{
     color: $light-background;
     border-color: $dark;
   }
+  #logo{
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    max-height: 80%;
+  }
+
   .nav{
-    float: right;
-    margin: 15px;
+    float: left;
+    margin-top: 65px;
+    margin-left: 45px;
+    font-size: 2rem;
+    .nav-link{
+      //padding: 5px;
+      float: left;
+      margin: 0;
+
+      .nav-link:hover{
+        border-radius: 5px;
+      }
+    }
     a{
+        border: 1px solid $dark-background;
+        padding-left:5px;
+        padding-right:5px;
         text-decoration: none;
-        color: $dark;
+        max-height: 100%;
     }
     a:hover{
-      color: $mid;
+      color: white;
+      background-color: $dark;
+      border-color: $dark;
     }
   }
 }
 .push{
-  padding-top: 80px;
+  padding-top: 180px;
   padding-bottom: 0px;
   margin-bottom: 0px;
 }
