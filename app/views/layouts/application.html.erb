@@ -7,30 +7,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="container">
+  <div class="header">
+    <a href="#" class="logo">
+      Almog Friedman
+    </a>
+    <div class="nav">
+      <a href="#">Home</a>  |
+      <a href="#">About</a>  |
+      <a href="#">Contact</a>
+    </div>
+  </div>
 
-<div class="header">
-  <a href="#" class="logo">
-    Almog Friedman
-  </a>
-  <div class="nav">
-    <a href="#">Home</a>  |
-    <a href="#">About</a>  |
-    <a href="#">Contact</a>
+  <div class="push">
+
+  </div>
+  <div class="body">
+    <%= yield %>
+  </div>
+
+  <div class="footer">
+    <small>
+      &copy All rights reserved to Almog Friedman 2016. See <a href="#">contact</a> page for more info
+    </small>
   </div>
 </div>
-
-<div class="push">
-
-</div>
-<div class="content">
-  <%= yield %>
-</div>
-
-<div class="footer">
-  <small>
-    &copy All rights reserved to Almog Friedman 2016. See <a href="#">contact</a> page for more info
-  </small>
-</div>
-
 </body>
 </html>
