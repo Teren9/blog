@@ -8,6 +8,7 @@
 @item_interval = 2000
 @image_class = '.cat'
 jQuery ($) ->
+  # image scroller
   $(window).load ->
     @number_of_items = $(@image_class).length
     find_next_item = ->
@@ -34,3 +35,11 @@ jQuery ($) ->
     $('#prev').click ->
       show_item(true)
     setInterval(show_item, item_interval)
+
+    # keep nav-bar fixed with scroll
+    @nav = $('#nav')
+    $(window).scroll ->
+      if $(window).scrollTop() > 150
+        @nav.removeClass('nav-abs').addClass('nav-fixed')
+      if $(window).scrollTop() < 149
+        @nav.removeClass('nav-fixed').addClass('nav-abs')

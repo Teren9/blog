@@ -15,13 +15,7 @@
 
     <%= image_tag 'logo.png', id: "logo"%>
 
-    <div class="nav">
-      <div class="nav-link"><a href="#">Home</a></div>
-      <div class="nav-link"><a href="#">About Us</a></div>
-      <div class="nav-link"><a href="#">Services</a></div>
-      <div class="nav-link"><a href="#">Projects</a></div>
-      <div class="nav-link"><a href="#">Contact Us</a></div>
-    </div>
+
     <div class="lang-bar">
       <a href="#"><%= image_tag 'lang/en.png', class: 'lang'%></a>
       <a href="#"><%= image_tag 'lang/he.png', class: 'lang'%></a>
@@ -29,9 +23,17 @@
     </div>
   </div>
 
-  <div class="push">
 
-  </div>
+    <div id="nav" class="nav nav-abs">
+      <div class="nav-center">
+        <span class="nav-link"><a href="#">Home</a></span>
+        <span class="nav-link"><a href="#">About Us</a></span>
+        <span class="nav-link"><a href="#">Services</a></span>
+        <span class="nav-link"><a href="#">Projects</a></span>
+        <span class="nav-link"><a href="#">Contact Us</a></span>
+      </div>
+    </div>
+  <div class="push"></div>
   <div class="body">
     <%= yield %>
   </div>
