@@ -1,24 +1,34 @@
 <div class="article">
-  <p class="engis">
-    <%= image_tag "engi/04.jpg", class: "eng", id: "eng1"%>
+  <h1>
+    Behold! Cycling Pictures!!
+    <div class="seperator"></div>
+  </h1>
+  <!-- <%= button_tag 'Stop', id: "stop" %>
+  <%= button_tag 'Start', id: "start" %> -->
+
+  <center>
+    <div class="engis">
+      <% for i in 1..7 do %>
+        <div class= "eng" id="eng_<%= i %>"style='background-image: url(<%= asset_path("engi/#{i}.jpg"); %>)'> </div>
+      <%end%>
+    </div>
+    <p>
+      <!-- <%= button_tag "Previous", id: "prev" %>
+      <%= button_tag "Next", id: "next" %> -->
+    </p>
+    <div class="thumbs">
+      <% for i in 1..7 do %>
+        <span class= "eng-thumb" id="thumb_<%= i %>"style='background-image: url(<%= asset_path("engi/#{i}.jpg"); %>)'> </span>
+      <% end %>
+    </div>
+  </center>
+    <!-- <%= image_tag "engi/04.jpg", class: "eng", id: "eng1"%>
     <%= image_tag "engi/05.jpg", class: "eng" %>
     <%= image_tag "engi/06.jpg", class: "eng" %>
     <%= image_tag "engi/2011-09-29_12.39.24.jpg", class: "eng" %>
     <%= image_tag "engi/dscf4921.jpg", class: "eng" %>
     <%= image_tag "engi/dscf5007.jpg", class: "eng" %>
-    <%= image_tag "engi/dscf6681.jpg", class: "eng" %>
-  </p>
-  <p>
-    <%= button_tag "Previous", id: "prev" %>
-    <%= button_tag "Next", id: "next" %>
-  </p>
-  <h1>
-    Hello from home
-    <div class="seperator"></div>
-  </h1>
+    <%= image_tag "engi/dscf6681.jpg", class: "eng" %> -->
 
-
-
-  <p>Hello! How did you find this place? </p>
 
 </div>

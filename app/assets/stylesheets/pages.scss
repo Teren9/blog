@@ -1,6 +1,8 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$img-width: 1000px;
+$img-height: 400px;
 .engis{
   position: relative;
   //max-width: 100%;
@@ -8,21 +10,50 @@
   //padding-bottom: 60%;
   //height:auto;
 //  overflow: hidden;
-  min-height: 800px;
+  margin-top: 20px;
+  min-height: $img-height;
+  max-width: $img-width;
+  min-width: 70%;
   z-index: 6;
   clear:both;
-
+  border: 1px solid black;
   //padding: 100%;
+
   .eng{
+
     display: none;
     position:absolute;
     top: 0;
     left: 0;
-    max-width: 100%;
-    max-height: 800px;
+    //max-width: 100%;
+    //max-height: $height;
+
+    min-height: 100%;
+    min-width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+    //clip: rect(200px,1400px,$height,40px);
     //height: auto;
 
   }
 }
-.engis:after{
+.thumbs{
+  padding-bottom: 10px;
+  .eng-thumb{
+    //background-image: image_url('engi/04.jpg');
+
+    display: inline-block;
+    width: 140px;
+    height: 90px;
+    border: 2px solid white;
+    background-size: 200%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .bordered-thumb{
+    border-style: inset;
+    border: 2px solid black;
+  }
 }
