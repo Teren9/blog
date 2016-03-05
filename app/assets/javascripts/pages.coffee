@@ -10,7 +10,7 @@ jQuery ($) ->
   started=false
   initial_fade_in = 500
   fade_time = 1000
-  item_interval = 2000
+  item_interval = 4000
   image_class = '.eng'
   $(document).on 'page:before-change', ->
     stop_cycle()

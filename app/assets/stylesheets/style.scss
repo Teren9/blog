@@ -1,6 +1,8 @@
 @import "palette";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
+html{
+  overflow-y: scroll;
+}
 html, body{
   margin:0;
   padding:0;
@@ -133,18 +135,20 @@ body{
       //float:left;
       a{
           font-family: 'Merriweather', serif;
-          color: $light;
+          color: $dark;
           font-weight: bolder;
           padding-left:10px;
           padding-right:10px;
           text-decoration: none;
           max-height: 100%;
+          // text-shadow: 1px 1px 1px #000000;
       }
       a:hover{
-        text-decoration: underline;
-        //color: white;
-        //background-color: $light;
-        //border-color: $light;
+        // text-decoration: underline;
+        color: white;
+        background-color: $dark;
+        border-color: $dark;
+        border-radius: 5px;
       }
     }
   }
