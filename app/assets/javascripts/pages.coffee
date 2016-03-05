@@ -5,12 +5,13 @@
 @current_item=0
 @initial_fade_in = 500
 @fade_time = 1000
-@item_interval = 2000
-@image_class = '.cat'
+@item_interval = 20000
+@image_class = '.eng'
+
 jQuery ($) ->
-  # image scroller
   $(window).load ->
     @number_of_items = $(@image_class).length
+    # image scroller
     find_next_item = ->
       if @current_item == @number_of_items - 1
         @current_item = 0
@@ -22,24 +23,34 @@ jQuery ($) ->
       else
         @current_item--
     show_item = (prev=false) ->
-        $(@image_class).eq(@current_item).fadeOut @fade_time
-        unless prev
-          find_next_item()
-        else
-          find_prev_item()
-        $(@image_class).eq(@current_item).fadeIn @fade_time
+      # console.log "asd"
+      $(@image_class).eq(@current_item).fadeOut @fade_time
+      unless prev
+        find_next_item()
+      else
+        find_prev_item()
+      $(@image_class).eq(@current_item).fadeIn @fade_time
 
     $(@image_class).eq(@current_item).fadeIn @initial_fade_in
     $('#next').click ->
       show_item()
     $('#prev').click ->
       show_item(true)
-    setInterval(show_item, item_interval)
+    # don't use () on show_item, unless you want to use the parameter
+    setInterval(show_item, @item_interval)
 
-    # keep nav-bar fixed with scroll
-    @nav = $('#nav')
+jQuery ($) ->
+  $(document).ready ->
     $(window).scroll ->
-      if $(window).scrollTop() > 150
-        @nav.removeClass('nav-abs').addClass('nav-fixed')
+      if ($(window).scrollTop() > 150)
+        $('#nav').removeClass('nav-abs').addClass('nav-fixed')
+        $('#logo-small').removeClass('logo-hide').addClass('logo-show')
       if $(window).scrollTop() < 149
-        @nav.removeClass('nav-fixed').addClass('nav-abs')
+        $('#nav').removeClass('nav-fixed').addClass('nav-abs')
+        $('#logo-small').removeClass('logo-show').addClass('logo-hide')
+
+
+# jQuery ($) ->
+#   $(document).ready ->
+#     console.log $('#eng1').height()
+#     # $('.engis').attr('height', $('#eng1').height() )
