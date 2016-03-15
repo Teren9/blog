@@ -16,6 +16,19 @@ jQuery ($) ->
     stop_cycle()
 
   $(document).on 'page:change', ->
+    $('.eng-thumb').click ->
+      #image_id = $(image_class).eq(current_item).attr('id')
+      de_hightlight_thumb()
+      $(image_class).eq(current_item).fadeOut fade_time
+      num = parseInt(@.id.charAt(@.id.length - 1))
+      num--
+      pause_cycle()
+      current_item = num
+      hightlight_thumb()
+      $(image_class).eq(current_item).fadeIn initial_fade_in
+      resume_cycle()
+      image_id = "eng_" + num
+
     number_of_items = $(image_class).length
     if number_of_items > 0
       start_cycle()
@@ -67,7 +80,7 @@ jQuery ($) ->
   show_first = ->
     if current_item != 0
       $(image_class).eq(current_item).fadeOut fade_time
-    current_item = 0;
+    current_item = 0
     hightlight_thumb()
     $(image_class).eq(current_item).fadeIn initial_fade_in
 
@@ -83,9 +96,22 @@ jQuery ($) ->
     # don't use () on show_item, unless you want to use the parameter
     # window.clearInterval(my_timer)
   start_cycle = ->
-    show_first()
-    timer = setInterval(show_item, item_interval)
-    started=true
+    if !started
+      show_first()
+      started=true
+      timer = setInterval(show_item, item_interval)
+
+
+  resume_cycle = ->
+    if !started
+      timer = setInterval(show_item, item_interval)
+      started=true
+
+
+  pause_cycle = ->
+    if started
+      clearInterval(timer)
+      started=false
 
 
   stop_cycle = ->
@@ -93,6 +119,7 @@ jQuery ($) ->
       de_hightlight_thumb()
       show_first()
       clearInterval(timer)
+      started=false
 
   $(document).on 'page:change', ->
 
